@@ -26,7 +26,7 @@
 - has_many :group_users
 - has_many :groups: :through group_users
 
-###groupsテーブル
+### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|index: true, null: false|
@@ -37,7 +37,7 @@
 - has_many :group-users
 - has_many :users, through: :group_users
 
-###groups_usersテーブル
+### groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|index: true, null: false, foreign_key: true|
