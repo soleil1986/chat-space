@@ -1,6 +1,8 @@
 # README
 
-## messagesテーブル
+##Chat-spaceデータベース設計
+
+### messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -9,39 +11,39 @@
 |user_id|integer|index: true, null: false, foreign_key: true|
 |group_id|integer|index: true, null: false, foreign_key: true|
 
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :group
 
-## usersテーブル
+### usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
 |e-mail|string|null: false, unique: true|
 
-### Association
+#### Association
 - has_many :messages
 - has_many :group_users
 - has_many :groups: :through group_users
 
-##groupsテーブル
+###groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|index: true, null: false|
-|id|integer|
+|id|integer|-------|
 
-### Association
+#### Association
 - has_many :messages
 - has_many :group-users
-  has_many :users, through: :group_users
+- has_many :users, through: :group_users
 
-##groups_usersテーブル
+###groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|index: true, null: false, foreign_key: true|
 |group_id|integer|index: true, null: false, foreign_key: true|
 
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :group
 
