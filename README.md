@@ -24,17 +24,16 @@
 #### Association
 - has_many :messages
 - has_many :group_users
-- has_many :groups: :through group_users
+- has_many :groups, through: :group_users
 
 ### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|index: true, null: false|
-|id|integer|
 
 #### Association
 - has_many :messages
-- has_many :group-users
+- has_many :group_users
 - has_many :users, through: :group_users
 
 ### groups_usersテーブル
