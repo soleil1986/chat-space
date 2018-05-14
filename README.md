@@ -8,8 +8,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|user_id|integer|index: true, null: false, foreign_key: true|
-|group_id|integer|index: true, null: false, foreign_key: true|
+|user_id|references: user|null: false, foreign_key: true|
+|group_id|references: group|null: false, foreign_key: true|
 
 #### Association
 - belongs_to :user
@@ -29,7 +29,7 @@
 ### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|index: true, null: false|
+|name|string|
 
 #### Association
 - has_many :messages
@@ -39,8 +39,8 @@
 ### groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index: true, null: false, foreign_key: true|
-|group_id|integer|index: true, null: false, foreign_key: true|
+|user_id|references: user|null: false, foreign_key: true|
+|group_id|references: group|null: false, foreign_key: true|
 
 #### Association
 - belongs_to :user
