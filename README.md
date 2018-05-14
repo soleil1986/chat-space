@@ -1,6 +1,6 @@
 # README
 
-##Chat-spaceデータベース設計
+## Chat-spaceデータベース設計
 
 ### messagesテーブル
 
@@ -30,7 +30,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|index: true, null: false|
-|id|integer|-------|
+|id|integer|
 
 #### Association
 - has_many :messages
