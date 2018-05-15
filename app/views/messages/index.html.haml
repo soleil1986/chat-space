@@ -1,0 +1,80 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
+    %title
+    %link{href:  "/assets/application.scss", media:  "all", rel:  "stylesheet"}/
+    %script{src:  "/javascripts/application.js"}
+  %body
+    .notification
+      .notice グループ作成成功
+    .sub_content
+      .sub_user
+        .sub_user_content
+          .sub_user_name
+            TOKIO
+          %a.sub_user_new_group{href: ""}
+            %i.fa.fa-pencil-square-o
+          %a.sub__user_edit_user{href: ""}
+            %i.fa.fa-cog
+      .sub_groups
+        .sub_groups_list
+          %a{href: ""}
+            .sub_group
+              .sub_group_name
+                group2
+              .sub_group_message
+                まだメッセージがありません
+          %a{href: ""}
+            .sub_group
+              .sub_group_name
+                group1
+              .sub_group_message
+                ドローンでお米が！
+    .main
+      .main_header
+        .main_header_group.clearfix
+          .main_header_group_name
+            group1
+          %main_header--group-edit-btn{href: ""}
+            edit
+        .main_header_members
+          MEMBER: MATSUOKA,JOJIMA,NAGASE,KOKUBUN
+          %i
+            username
+      .main_body
+        .main_body_messages_list
+          .main_message.clearfix{"": ""}
+            .main_message_name
+              username
+            .main_message_date
+              2018/05/14 20:40:20
+            .main__message_body
+              ドローンでお米が！
+              %img.main_message_body_image{src: ""}/
+          .main_message.clearfix{"": ""}
+            .main_message_name
+              username
+            .main_message_date
+              2018/05/14 20:39:25
+            .main_message_body
+              お米不足に見舞われる
+              %img.main_message_body_image{src: ""}/
+          .main_message.clearfix{"": ""}
+            .main_message_name
+              username
+            .main_message_date
+              2018/05/14 20:39:14
+            .main_message_body
+              ライスが食べたい
+              %img.main_message_body_image{src: ""}/
+      .main_footer
+        %form#new_message.main_footer_form{"accept-charset": "UTF-8", action:  "", enctype: "multipart/form-data", method: "post"}
+          %input{name: "utf8", type: "hidden", value: "✓"}/
+          %input{name: "authenticity_token", type: "hidden", value: ""}/
+          .main__footer_body
+            %input#message_body.message{name: "", placeholder: "type a message", type: ""}/
+            %label.chat_file{for: "message_image"}
+              %input#message_image.image{name: "message[image]", type: "file"}/
+              %i.fa.fa_image
+          %input.submit{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
