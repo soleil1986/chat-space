@@ -19,82 +19,7 @@ html{
     TODO test putting a class on HEAD.
         - Fails on FF.
 */
-body{
- .notification{
-    background-color: #38AEF0;
-    margin-bottom: 35px;
-    .notice{
-        text-align: center;
-        color:#FFF;
-    }
-             }
-
- .sub_content{
-    // background-color: #FFF;
-      width: 300px;
-    .sub_user{
-    background-color: #253141;
-    // color:#FFF;
-    font-size:16px;
-    font-family: bold;
-
-        .sub_user_content{
-          .sub_user_name{
-            color:#FFF;
-         }
-       }
-                   }
-    .sub_groups{
-        .sub_groups_list{
-            background-color:#2f3e51  ;
-            .sub_group{
-                .sub_group_name{
-                    color:#FFF;}
-                      }
-                .sub_group_message{
-                    color:#FFF;
-                }
-                        }
-               }
-
-           }
- .main{
-      .main_header{
-        .main_header_group.clearfix{
-            clear:both;}
-                          }
-      .main_header_group_name{
-
-          .main_header_group{}
-                  }
-
-
-
- //        .main_header_members{
- //          MEMBER: MATSUOKA,JOJIMA,NAGASE,KOKUBUN
- //          %i
- //            username
- //                          }
- //      .main_body
- //        .main_body_messages_list
- //          .main_message.clearfix{"": ""}
- //            .main_message_name
- //              username
- //            .main_message_date
- //              2018/05/14 20:40:20
- //            .main__message_body
- //                  }
-
-
-
-.main_footer{
-    background-color: blue;
-.form{
-
-     }
-}
-}
-      }
+body,
 div,
 dl,
 dt,
@@ -147,7 +72,8 @@ var {
 }
 
 ol,
-ul {
+ul,
+li {
     list-style:none;
 }
 

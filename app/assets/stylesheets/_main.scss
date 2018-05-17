@@ -1,0 +1,115 @@
+  .chat{
+    width: calc(100% - 300px);
+    display:block ;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    float: right;
+
+    .header{
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 40px;
+    margin: 0;
+    display:block ;
+
+    .main__header__group{
+      float:left;
+      p.main__header__group__name{
+        font-size: 20px;
+        color: #333;
+        margin-top: 35px;
+      }
+      p.main__header__members{
+        font-size: 12px;
+        color: #999;
+        margin-top: 15px;
+      }
+    }
+    .main__header__edit{
+    border: 1px solid $skyblue;
+    color: $skyblue;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 28px;
+    padding: 0 20px;
+    .edit__btn{
+    color: $skyblue;
+    text-decoration: none;
+}
+  }
+
+    }
+
+    .messages{
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    padding: 46px 40px 0;
+
+    .main__message1{
+        .main__message__name{
+          margin-top: 46px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+          display:inline;
+        }
+
+        .main__message__date{
+          font-size: 12px;
+          color: #999;
+          display:inline;
+        }
+
+        .main__message__body{
+          margin-top: 10px;
+          margin-bottom: 40px;
+          font-size: 14px;
+          color: #434A54;
+        }
+    }
+    }
+    .form{
+    background-color: #DDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    margin:0;
+
+    .message__footer__textarea{
+    border: none;
+    box-sizing: border-box;
+    float: left;
+    height: 50px;
+    padding: 0 10px;
+    width: calc(100% - 145px);
+    }
+    .submit__btn{
+    background-color: $skyblue;
+    border: none;
+    color: $white;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+    }
+    .select__image{
+      padding-right: 10px;
+      height: 50px;
+      background-color: $white;
+      float:left;
+    i.fa.fa-image{
+      margin-top: 15px;
+        }
+      }
+  }
+
+}
+
+
+
+
