@@ -1,31 +1,29 @@
-  .chat{
+.chat{
     width: calc(100% - 300px);
     display:block ;
     margin: 0;
     padding: 0;
     color: #000;
     float: right;
-
     .header{
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
     margin: 0;
     display:block ;
-
     .main__header__group{
       float:left;
-      p.main__header__group__name{
+      &__name{
         font-size: 20px;
         color: #333;
         margin-top: 35px;
       }
-      p.main__header__members{
+      &__members{
         font-size: 12px;
         color: #999;
         margin-top: 15px;
       }
-    }
+      }
     .main__header__edit{
     border: 1px solid $skyblue;
     color: $skyblue;
@@ -37,39 +35,34 @@
     .edit__btn{
     color: $skyblue;
     text-decoration: none;
-}
-  }
-
     }
-
+    }
+    }
     .messages{
     background-color: #FAFAFA;
     box-sizing: border-box;
     height: calc(100vh - 100px - 90px);
     overflow: scroll;
     padding: 46px 40px 0;
-
-    .main__message1{
-        .main__message__name{
+    .main__message{
+        &__name{
           margin-top: 46px;
           font-size: 16px;
           font-weight: bold;
           color: #434A54;
           display:inline;
         }
-
-        .main__message__date{
+        &__date{
           font-size: 12px;
           color: #999;
           display:inline;
         }
-
-        .main__message__body{
+        &__body{
           margin-top: 10px;
           margin-bottom: 40px;
           font-size: 14px;
           color: #434A54;
-        }
+    }
     }
     }
     .form{
@@ -78,7 +71,6 @@
     height: 90px;
     padding: 20px 50px 20px 40px;
     margin:0;
-
     .message__footer__textarea{
     border: none;
     box-sizing: border-box;
@@ -104,12 +96,7 @@
       float:left;
     i.fa.fa-image{
       margin-top: 15px;
-        }
-      }
-  }
-
-}
-
-
-
-
+    }
+    }
+    }
+    }

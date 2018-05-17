@@ -1,55 +1,46 @@
   .side__bar{
-    background-color: #253141;
+    background-color: $navy;
     width: 300px;
     color: $white;
     padding: 0px;
     margin: 0px;
     float:left;
-
   .side__header{
-    background-color: #253141;
+    background-color: $navy;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
-
-  .side__header__name{
+  &__name{
     color: $white;
     font-weight: bold;
     font-size: 16px;
   }
-
-  .side__header__option{
-
-}
+  &__option{
+  }
       i.fa.fa-pencil-square-o{
         margin-left: 150px;
       }
       i.fa.fa-cog{
       }
-    }
-    }
-
+      }
+  }
   .groups{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0 20px;
-    // margin:0;
     display:block ;
     .sub__groups__list{
       .sub__group{
-          .sub__group__name{
+          &__name{
            padding-top: 40px;
            color: $white;
            font-size: 15px;
           }
-
-          .sub__group__message{
+          &__message{
           color: $white;
           font-size: 11px;
           padding-top: 5px;
           }
           }
-    }
-
-}
-
+          }
+          }
