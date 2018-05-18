@@ -17,12 +17,12 @@
   }
   &__option{
   }
-      i.fa.fa-pencil-square-o{
-        margin-left: 150px;
+    i.fa.fa-pencil-square-o{
+      margin-left: 150px;
+    }
+    i.fa.fa-cog{
       }
-      i.fa.fa-cog{
-      }
-      }
+    }
   }
   .groups{
     background-color: #2f3e51;
@@ -37,10 +37,10 @@
            font-size: 15px;
           }
           &__message{
-          color: $white;
-          font-size: 11px;
-          padding-top: 5px;
+            color: $white;
+            font-size: 11px;
+            padding-top: 5px;
           }
-          }
-          }
-          }
+      }
+  }
+}
