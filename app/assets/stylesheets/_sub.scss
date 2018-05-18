@@ -4,7 +4,8 @@
     color: $white;
     padding: 0px;
     margin: 0px;
-    float:left;
+    float: left;
+
   .side__header{
     background-color: $navy;
     height: 100px;
@@ -24,12 +25,15 @@
       }
     }
   }
+
   .groups{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0 20px;
-    display:block ;
+    display: block ;
+
     .sub__groups__list{
+
       .sub__group{
           &__name{
            padding-top: 40px;
