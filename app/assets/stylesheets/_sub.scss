@@ -14,7 +14,7 @@
   &__name{
     color: $white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: $side_header_name;
   }
   &__option{
   }
@@ -29,7 +29,7 @@
   }
 
   .groups{
-    background-color: #2f3e51;
+    background-color: $blue_gray;
     height: calc(100vh - 100px);
     padding: 0 20px;
     display: block ;
@@ -40,11 +40,11 @@
           &__name{
            padding-top: 40px;
            color: $white;
-           font-size: 15px;
+           font-size: $sub_group_name;
           }
           &__message{
             color: $white;
-            font-size: 11px;
+            font-size: $sub_group_message;
             padding-top: 5px;
           }
       }

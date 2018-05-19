@@ -1,13 +1,8 @@
 .sub__groups__list
-  =link_to "" do
+  - current_user.groups.each do |group|
     .sub__group
-      .sub__group__name
-        group2
-      .sub__group__message
-        まだメッセージがありません
-  =link_to "" do
-    .sub__group
-      .sub__group__name
-        group1
-      .sub__group__message
-        結果にコミット
+      = link_to group_messages_path(group) do
+        .sub__group__name
+          = group.name
+        .sub__group__message
+          メッセージはまだありません。
