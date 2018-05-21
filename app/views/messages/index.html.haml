@@ -21,12 +21,12 @@
     .main__header__edit
       .edit__btn Edit
   .messages
-    = render "partial/contents"
+    = render @messages
   .form
-    %form.main__footer__new{id: "new_message"}
-      .main__footer_body
-        %input.message__footer__textarea{name: "", placeholder: "type a message", type: "text"}
-        .select__image
-          %label.image_btn{for: "message_image"}
-            %i.fa.fa-image
-      %input.submit__btn{name: "", type: "submit", value: "Send"}
+    .message__footer__textarea
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, class: 'form__message', placeholder: 'type a message'
+        = f.label :image, class: 'select__message' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

@@ -79,34 +79,35 @@
       padding: 20px 50px 20px 40px;
       margin: 0;
 
-    .message__footer__textarea{
+    .form__message{
       border: none;
       box-sizing: border-box;
       float: left;
       height: 50px;
       padding: 0 10px;
-      width: calc(100% - 145px);
+      width: calc(100% - 180px);
     }
-
-    .submit__btn{
-      background-color: $skyblue;
-      border: none;
-      color: $white;
-      float: right;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-    }
-
-    .select__image{
-      padding-right: 10px;
-      height: 50px;
-      background-color: $white;
-      float: left;
-    i.fa.fa-image{
-      margin-top: 15px;
+    .select__message {
+      .icon {
+        background-color: white;
+        font-size: 20px;
+        line-height: 50px;
+        padding: 0 15px;
+      }
+      .hidden{
+        display: none;
       }
     }
-  }
 }
+    .form__submit{
+          background-color: $skyblue;
+          border: none;
+          color: $white;
+          float: right;
+          font-size: 16px;
+          height: 50px;
+          margin-left: 20px;
+          padding: 0 30px;
+        }
+  }
+
