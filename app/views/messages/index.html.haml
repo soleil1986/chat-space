@@ -15,11 +15,14 @@
   .header
     .main__header__group
       %p.main__header__group__name
-        group1
+        = @group.name
       %p.main__header__group__members
-        MEMBER: team JAPAN
+        Members:
+        - @group.users.each do |user|
+          = user.name
     .main__header__edit
-      .edit__btn Edit
+      .edit__btn
+        = link_to "Edit",edit_group_path(@group)
   .messages
     = render @messages
   .form

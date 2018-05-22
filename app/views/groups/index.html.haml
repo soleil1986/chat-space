@@ -11,22 +11,3 @@
           = fa_icon 'cog', class: 'icon'
   .groups
     = render "partial/group"
-.chat
-  .header
-    .main__header__group
-      %p.main__header__group__name
-        group1
-      %p.main__header__group__members
-        MEMBER: team JAPAN
-    .main__header__edit
-      .edit__btn Edit
-  .messages
-    = render "partial/contents"
-  .form
-    .message__footer__textarea
-      = form_for [@group, @message] do |f|
-        = f.text_field :body, class: 'form__message', placeholder: 'type a message'
-        = f.label :image, class: 'select__message' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'

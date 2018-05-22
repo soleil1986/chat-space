@@ -4,8 +4,10 @@
       = message.user.name
     .main__message__date
       = message.created_at
+    .main__message__body
+      = message.body
   .main2__message
     - if message.body.present?
       %p.main2__body
-        = message.body
+        / = message.body
     = image_tag message.image.url, class: 'main2__image' if message.image.present?
