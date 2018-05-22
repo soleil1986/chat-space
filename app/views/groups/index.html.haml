@@ -11,22 +11,3 @@
           = fa_icon 'cog', class: 'icon'
   .groups
     = render "partial/group"
-.chat
-  .header
-    .main__header__group
-      %p.main__header__group__name
-        group1
-      %p.main__header__group__members
-        MEMBER: team JAPAN
-    .main__header__edit
-      .edit__btn Edit
-  .messages
-    = render "partial/contents"
-  .form
-    %form.main__footer__new{id: "new_message"}
-      .main__footer_body
-        %input.message__footer__textarea{name: "", placeholder: "type a message", type: "text"}
-        .select__image
-          %label.image_btn{for: "message_image"}
-            %i.fa.fa-image
-      %input.submit__btn{name: "", type: "submit", value: "Send"}
