@@ -1,0 +1,50 @@
+$(document).on("turbolinks:load", function(){
+  function buildHTML(message){
+    var image = ""
+    if (message.image == null) {
+      image = `<img src = ${message.image} class='main2__message__image' height= "150">`
+    }
+    var html = `<div class="main__body__messages">
+                  <div class="main__message">
+                    <div class="main__message__name">
+                      ${ message.user_name }
+                    </div>
+                    <div class="main__message__date">
+                      ${ message.created_at }
+                    </div>
+                    <div class="main__message__body">
+                      ${ message.body }
+                    </div>
+                  </div>
+                  <div class="main2__message">
+                      <p class="main2__body">
+                      </p>
+                      ${image}
+                  </div>
+                </div>`
+    return html;
+  }
+  $('#new_message').on('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr('action')
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.messages').append(html);
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+      $('.form__message').val("");
+      $('.form__submit').prop("disabled", false);
+    })
+   .fail(function(){
+      alert('error');
+    })
+  });
+});
