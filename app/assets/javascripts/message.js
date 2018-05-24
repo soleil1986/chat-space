@@ -1,8 +1,9 @@
-$(document).on("turbolinks:load", function(){
+$(document).on("turbolinks:load",
+  function(){
   function buildHTML(message){
     var image = ""
-    if (message.image == null) {
-      image = `<img src = ${message.image} class='main2__message__image' height= "150">`
+    if (message.image.url != null) {
+      image = `<img src = ${message.image.url} class='main2__image'>`
     }
     var html = `<div class="main__body__messages">
                   <div class="main__message">
