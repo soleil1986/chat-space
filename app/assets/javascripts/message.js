@@ -2,8 +2,8 @@ $(document).on("turbolinks:load",
   function(){
   function buildHTML(message){
     var image = ""
-    if (message.image.url != null) {
-      image = `<img src = ${message.image.url} class='main2__image'>`
+    if (message.image != null) {
+      image = `<img src = ${message.image} class='main2__image'>`
     }
     var html = `<div class="main__body__messages">
                   <div class="main__message">
@@ -42,6 +42,7 @@ $(document).on("turbolinks:load",
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
       $('.form__message').val("");
+      $('.hidden').val("");
       $('.form__submit').prop("disabled", false);
     })
    .fail(function(){
@@ -49,3 +50,5 @@ $(document).on("turbolinks:load",
     })
   });
 });
+
+
