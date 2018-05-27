@@ -1,11 +1,38 @@
 $(document).on("turbolinks:load",
   function(){
+  var interval = setInterval(function() {
+    var messageId = $('.main__body__messages:last').attr('message_id');
+    if (location.pathname.match(/\/groups\/\d+\/messages/)) {
+      $.ajax({
+        url: location.href,
+        type: 'GET',
+        data: { id: messageId },
+        dataType: 'json'
+      })
+      .done(function(json){
+        if (json.length !== 0){
+        var insertHTML = '';
+        json.messages.forEach(function(messages){
+          insertHTML += buildHTML(messages);
+        });
+        $('.messages').append(insertHTML);
+        $('.messages').animate({ scrollTop: $('.messages').get(0).scrollHeight },'slow');
+      }
+       })
+      .fail(function(data){
+        alert('自動更新に失敗しました');
+      });
+    } else {
+      clearInterval(interval);
+    };
+  } , 5000);
+
   function buildHTML(message){
     var image = ""
     if (message.image != null) {
       image = `<img src = ${message.image} class='main2__image'>`
     }
-    var html = `<div class="main__body__messages">
+    var html = `<div class="main__body__messages" message_id=${ message.id }>
                   <div class="main__message">
                     <div class="main__message__name">
                       ${ message.user_name }
@@ -45,9 +72,7 @@ $(document).on("turbolinks:load",
       $('.form__submit').prop("disabled", false);
     })
    .fail(function(){
-      alert('error');
+      alert('エラーが発生しました');
     })
   });
 });
-
-
