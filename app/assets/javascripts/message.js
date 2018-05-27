@@ -2,7 +2,7 @@ $(document).on("turbolinks:load",
   function(){
   var interval = setInterval(function() {
     var messageId = $('.main__body__messages:last').attr('message_id');
-    if (window.location.pathname.match(/\/groups\/\d+\/messages/)) {
+    if (location.pathname.match(/\/groups\/\d+\/messages/)) {
       $.ajax({
         url: location.href,
         type: 'GET',
@@ -13,7 +13,7 @@ $(document).on("turbolinks:load",
         if (json.length !== 0){
         var insertHTML = '';
         json.messages.forEach(function(messages){
-          insertHTML += buildHTML(message);
+          insertHTML += buildHTML(messages);
         });
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages').get(0).scrollHeight },'slow');
